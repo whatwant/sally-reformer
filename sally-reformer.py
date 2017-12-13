@@ -187,6 +187,43 @@ if __name__ == "__main__":
                 
                 
                 break
+            
+            
+            elif INFO['PATTERN'][pattern] == items['FIRSTNAME']:
+            
+                ITEM = {
+                    'DIR'  : items['DIR'],
+                    'FROM' : items['FILENAME'],
+                    'TO' : items['FILENAME'],
+                    #'TO'   : INFO['PATTERN'][ pattern ] + "." + items['LASTNAME']
+                }
+                print ITEM['TO'].decode( 'utf8' ),
+                
+                
+                #src = os.path.basename( os.path.normpath( ITEM['DIR'].decode( 'utf8' ) ) )
+                #dst = ITEM['TO'].decode( 'utf8' )
+                
+                #if( src == dst ):
+                #    src = ITEM['DIR'].decode( 'utf8' )
+                #    dst = ".".join(ITEM['DIR'].split(".")[:-1]).decode('utf8')
+                    
+                #    os.rename( src, dst )
+                #    ITEM['DIR'] = ".".join(ITEM['DIR'].split(".")[:-1])
+                
+                src = os.path.join( ITEM['DIR'], ITEM['FROM'] ).decode( 'utf8' )
+                dst = os.path.join( INFO['PATH']['source_directory'], ITEM['TO'] ).decode( 'utf8' )
+                
+                shutil.move( src, dst)
+                if os.listdir( ITEM['DIR'].decode( 'utf8' ) ) == []:
+                    shutil.rmtree( ITEM['DIR'].decode( 'utf8' ) )
+                
+                #print
+                #print os.path.join( ITEM['DIR'], ITEM['FROM'] ).decode( 'utf8' )
+                #print os.path.join( INFO['PATH']['source_directory'], ITEM['TO'] ).decode( 'utf8' )
+                #print
+                
+                
+                break
     
         print
 
