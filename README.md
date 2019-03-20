@@ -1,3 +1,5 @@
+[![Gitter](https://badges.gitter.im/whatwant/community.svg)](https://gitter.im/whatwant/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
 # sally-reformer
 Pattern-matching file name change python script
 
