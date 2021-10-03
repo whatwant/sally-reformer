@@ -1,5 +1,38 @@
 [![Gitter](https://badges.gitter.im/whatwant/community.svg)](https://gitter.im/whatwant/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
+
+## Python Virtual Environment
+
+### pip upgrade
+```bash
+> python -m pip install --upgrade pip
+```
+
+### virtualenv install
+```bash
+> pip install virtualenv virtualenvwrapper-win
+```
+
+### create/activate virtualenv
+```bash
+> mkvirtualenv .venv
+```
+
+### deactivate virtualenv
+```bash
+> deactivate
+```
+
+### remove virtualenv
+```bash
+> rmvirtualenv .venv
+```
+
+
+
+
+
+
 # sally-reformer
 Pattern-matching file name change python script
 
